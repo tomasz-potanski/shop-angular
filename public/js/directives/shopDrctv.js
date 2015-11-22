@@ -26,6 +26,63 @@ angular.module('shopApp')
               this.items = ShopFactory.items;
             }) );
 
+          this.isFade = false;
+
+          this.categories = [
+            {
+              name: '',
+              displayName: 'All'
+            },
+            {
+              name: 'electronics',
+              displayName: 'electronics'
+            },
+            {
+              name: 'jewellery',
+              displayName: 'jewellery'
+            },
+            {
+              name: 'grocery',
+              displayName: 'grocery'
+            },
+            {
+              name: 'fashion',
+              displayName: 'fashion'
+            },
+            {
+              name: 'motorization',
+              displayName: 'motorization'
+            }
+          ];
+
+          this.searchByFields = [
+            {
+              name: 'name',
+              displayName: 'Name'
+            },
+            {
+              name: 'producer',
+              displayName: 'Producer'
+            },
+            {
+              name: 'category',
+              displayName: 'Category'
+            },
+            {
+              name: 'ship_from',
+              displayName: 'Country of shipment'
+            }
+          ];
+
+          this.currentCategory = {
+              name: '',
+              displayName: 'All'
+          };
+          this.currentSearchBy = {
+            name: 'name',
+            displayName: 'Name'
+          };
+
         },
 
         link: function (scope, element, attrs, ctrl) {

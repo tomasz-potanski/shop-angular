@@ -1,14 +1,26 @@
 <div class="shop-directive">
     <input
-            ng-model="searchPhrase"
+            ng-model="searchPhrase[shop.currentSearchBy.name]"
             class="searchPhrase"
-            placeholder="search by name"
+            id="searchPhrase"
+            placeholder="Search by {{ shop.currentSearchBy.displayName | lowercase }}"
     />
+
+    <div class="select-wrapper">
+        Search by:
+        <select
+                ng-model="shop.currentSearchBy"
+                id="select_search_by"
+                ng-init="shop.currentSearchBy = shop.searchByFields[0]"
+                ng-options="field.displayName for field in shop.searchByFields ">
+        </select>
+    </div>
 
     <div class="items-container">
 
         <!--http://placehold.it/150x150-->
-        <div class="shop-item" data-ng-repeat="item in filtereditems = (shop.items | filter: searchPhrase)">
+        <div class="shop-item"
+             data-ng-repeat="item in filtereditems = (shop.items | filter:{ category: shop.currentCategory.name } | filter:searchPhrase )">
             <div
                     class="zibox"
             >
@@ -23,6 +35,11 @@
                 <span class="price">
                     {{ item.price }}{{ item.currency }}
                 </span>
+
+                <span class="category">
+                    {{ item.category }}
+                </span>
+
                 <span class="ship-from">
                     {{ item.ship_from }}
                 </span>
@@ -38,7 +55,32 @@
         <div class="clear"></div>
     </div>
     <div class="lack-of-items" ng-show="!filtereditems.length">Search returns no results</div>
-    <div class="hamburger">
+    <div
+            class="hamburger"
+            data-ng-click="shop.isFade=true"
+    ></div>
+
+    <div
+            data-ng-class="{ show: shop.isFade, displayhide: !shop.isFade }"
+            id="black-fade"
+            data-ng-click="shop.isFade = false"
+    ></div>
+    <div
+            class="category-menu"
+            data-ng-class="{show: shop.isFade}"
+    >
+        <span class="text">
+            Filter by category
+        </span>
+        <select
+                name="show-filter"
+                ng-model="shop.currentCategory"
+                id="show-filter"
+                ng-init="shop.currentCategory = shop.categories[0]"
+                ng-options="category.displayName for category in shop.categories ">
+        </select>
 
     </div>
+
+
 </div>

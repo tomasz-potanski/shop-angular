@@ -90,11 +90,16 @@
     content: "Producer: ";
   }
 
+  .category:before {
+    content: "Category: ";
+  }
+
   .left:before {
     content: "Items left: ";
   }
 
   .desc {
+    padding-top: 15px;
     text-indent: 30px;
   }
 }

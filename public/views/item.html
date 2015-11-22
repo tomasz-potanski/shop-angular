@@ -7,25 +7,26 @@
     </div>
 
     <div class="container">
-        <span class="name">
-            {{ itemCtrl.item.name }}
+        <span class="name" data-ng-bind="itemCtrl.item.name">
+
         </span>
-        <span class="price">
-            {{ itemCtrl.item.price }}{{ itemCtrl.item.currency }}
+        <span class="price" data-ng-bind="itemCtrl.item.price + ' ' + itemCtrl.item.currency">
         </span>
-        <span class="ship-from">
-            {{ itemCtrl.item.ship_from }}
+
+        <span class="ship-from" data-ng-bind="itemCtrl.item.ship_from">
         </span>
-        <span class="left">
-            {{ itemCtrl.item.left }}
+
+        <span class="left" data-ng-bind="itemCtrl.item.left">
         </span>
-        <span class="producer">
-            {{ itemCtrl.item.producer }}
+
+        <span class="producer" data-ng-bind="itemCtrl.item.producer">
         </span>
 
         <div class="back-btn glyphicon glyphicon-chevron-left"
              ng-click="goToHome()"
-        ></div>
+        >
+            <span class="text">Back</span>
+        </div>
     </div>
     <div class="clear"></div>
         <span class="desc">

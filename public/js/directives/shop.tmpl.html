@@ -1,15 +1,22 @@
-<div class="items-container">
+<div class="shop-directive">
+    <input
+            ng-model="searchPhrase"
+            class="searchPhrase"
+            placeholder="search by name"
+    />
 
-    <!--http://placehold.it/150x150-->
-    <div class="shop-item" data-ng-repeat="item in shop.items">
-        <div
-                class="zibox"
-        >
-            <div class="zimage"
-                 ng-style="{'background-image': 'url(' + item.picture + ')'}"
-                 ng-click="shop.goToItem(item.id);"
-            ></div>
-        </div>
+    <div class="items-container">
+
+        <!--http://placehold.it/150x150-->
+        <div class="shop-item" data-ng-repeat="item in filtereditems = (shop.items | filter: searchPhrase)">
+            <div
+                    class="zibox"
+            >
+                <div class="zimage"
+                     ng-style="{'background-image': 'url(' + item.picture + ')'}"
+                     ng-click="shop.goToItem(item.id);"
+                ></div>
+            </div>
                 <span class="name">
                     {{ item.name }}
                 </span>
@@ -26,7 +33,12 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda blanditiis culpa deleniti deserunt dolore dolorum et fugit itaque, modi quasi quod sapiente, suscipit voluptates!
                 </span>
 
-    </div>
+        </div>
 
-    <div class="clear"></div>
+        <div class="clear"></div>
+    </div>
+    <div class="lack-of-items" ng-show="!filtereditems.length">Search returns no results</div>
+    <div class="hamburger">
+
+    </div>
 </div>

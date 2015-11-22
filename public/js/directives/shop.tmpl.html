@@ -1,0 +1,32 @@
+<div class="items-container">
+
+    <!--http://placehold.it/150x150-->
+    <div class="shop-item" data-ng-repeat="item in shop.items">
+        <div
+                class="zibox"
+        >
+            <div class="zimage"
+                 ng-style="{'background-image': 'url(' + item.picture + ')'}"
+                 ng-click="shop.goToItem(item.id);"
+            ></div>
+        </div>
+                <span class="name">
+                    {{ item.name }}
+                </span>
+                <span class="price">
+                    {{ item.price }}{{ item.currency }}
+                </span>
+                <span class="ship-from">
+                    {{ item.ship_from }}
+                </span>
+                <span class="left">
+                    {{ item.left }}
+                </span>
+                <span class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda blanditiis culpa deleniti deserunt dolore dolorum et fugit itaque, modi quasi quod sapiente, suscipit voluptates!
+                </span>
+
+    </div>
+
+    <div class="clear"></div>
+</div>

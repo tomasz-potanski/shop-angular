@@ -1,0 +1,37 @@
+<div class="item-details">
+
+    <div class="zibox">
+        <div class="image"
+             ng-style="{'background-image': 'url(' + itemCtrl.item.picture_large + ')'}"
+        ></div>
+    </div>
+
+    <div class="container">
+        <span class="name">
+            {{ itemCtrl.item.name }}
+        </span>
+        <span class="price">
+            {{ itemCtrl.item.price }}{{ itemCtrl.item.currency }}
+        </span>
+        <span class="ship-from">
+            {{ itemCtrl.item.ship_from }}
+        </span>
+        <span class="left">
+            {{ itemCtrl.item.left }}
+        </span>
+        <span class="producer">
+            {{ itemCtrl.item.producer }}
+        </span>
+
+        <div class="back-btn glyphicon glyphicon-chevron-left"
+             ng-click="goToHome()"
+        ></div>
+    </div>
+    <div class="clear"></div>
+        <span class="desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci assumenda blanditiis culpa deleniti deserunt dolore dolorum et fugit itaque, modi quasi quod sapiente, suscipit voluptates!
+        </span>
+
+
+
+</div>

@@ -1,7 +1,7 @@
 #Simple Online Shop in AngularJS
 ---
 - **Technologies**: AngularJS, Express, Node, Protractor, PhantomJS
-- **Link**: [http://52.30.225.253:8081/](http://52.30.225.253:8081/)
+- **Link**: [http://52.17.123.192:8081/](http://52.17.123.192:8081/)
 - **GitHub**: [https://github.com/tomasz-potanski/shop-angular](https://github.com/tomasz-potanski/shop-angular)
 - **Date**: November, 2015
 

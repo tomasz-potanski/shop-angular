@@ -1,1 +1,11 @@
-angular.module('shopApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'ItemCtrl']);
+angular.module('shopApp',
+  [
+    // dependencies:
+    'ngRoute',
+
+    'appRoutes',
+
+    // controllers:
+    'MainCtrl', 'ItemCtrl'
+  ]
+);

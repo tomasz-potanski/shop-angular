@@ -1,6 +1,6 @@
 <div class="shop-directive">
     <input
-            ng-model="searchPhrase[shop.currentSearchBy.name]"
+            data-ng-model="searchPhrase[shop.currentSearchBy.name]"
             class="searchPhrase"
             id="searchPhrase"
             placeholder="Search by {{ shop.currentSearchBy.displayName | lowercase }}"
@@ -9,10 +9,10 @@
     <div class="select-wrapper">
         Search by:
         <select
-                ng-model="shop.currentSearchBy"
+                data-ng-model="shop.currentSearchBy"
                 id="select_search_by"
-                ng-init="shop.currentSearchBy = shop.searchByFields[0]"
-                ng-options="field.displayName for field in shop.searchByFields ">
+                data-ng-init="shop.currentSearchBy = shop.searchByFields[0]"
+                data-ng-options="field.displayName for field in shop.searchByFields ">
         </select>
     </div>
 
@@ -25,8 +25,8 @@
                     class="zibox"
             >
                 <div class="zimage"
-                     ng-style="{'background-image': 'url(' + item.picture + ')'}"
-                     ng-click="shop.goToItem(item.id);"
+                     data-ng-style="{'background-image': 'url(' + item.picture + ')'}"
+                     data-ng-click="shop.goToItem(item.id);"
                 ></div>
             </div>
                 <span class="name">
@@ -54,7 +54,7 @@
 
         <div class="clear"></div>
     </div>
-    <div class="lack-of-items" ng-show="!filtereditems.length">Search returns no results</div>
+    <div class="lack-of-items" data-ng-show="!filtereditems.length">Search returns no results</div>
     <div
             class="hamburger"
             data-ng-click="shop.isFade=true"
@@ -74,10 +74,10 @@
         </span>
         <select
                 name="show-filter"
-                ng-model="shop.currentCategory"
+                data-ng-model="shop.currentCategory"
                 id="show-filter"
-                ng-init="shop.currentCategory = shop.categories[0]"
-                ng-options="category.displayName for category in shop.categories ">
+                data-ng-init="shop.currentCategory = shop.categories[0]"
+                data-ng-options="category.displayName for category in shop.categories ">
         </select>
 
     </div>

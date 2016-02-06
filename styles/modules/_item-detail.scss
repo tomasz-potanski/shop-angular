@@ -1,41 +1,18 @@
 .item-details {
   padding-top: 50px;
-  //transition: opacity 2s;
-  //&.ng-enter {
-  //  opacity: 0;
-  //}
-  //&.ng-enter-active {
-  //  opacity: 1;
-  //}
-  //&.ng-enter, &.ng-leave {
-  //  background: white;
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  right: 0;
-  //}
-  //&.ng-enter {
-  //  animation: 2s fade-in;
-  //  z-index: 100;
-  //}
-  //
-  //&.ng-leave {
-  //  animation: 2s fade-out;
-  //  z-index:99;
-  //}
   .zibox {
+    float: left;
+    height: 400px;
     overflow: hidden;
     width: 400px;
-    height: 400px;
-    float: left;
     .image {
-      background-repeat: no-repeat;
       background-position: center center;
-      width: 100%;
-      height: 100%;
+      background-repeat: no-repeat;
       background-size: cover;
+      height: 100%;
       transform: scale(1, 1);
       transition: .3s;
+      width: 100%;
       &:hover {
         opacity: .7;
         transform: scale(1.2, 1.2);
@@ -45,23 +22,21 @@
   
   .container {
     float: left;
-    width: calc(100% - 450px);
     position: relative;
+    width: calc(100% - 450px);
 
     .back-btn {
+      cursor: pointer;
+      font-size: 30px;
       position: absolute;
       right: 0;
-      width: 120px;
-      //height:50px;
-      font-size: 30px;
-      cursor: pointer;
       transition: font-size 0.2s, color 0.2s;
+      width: 120px;
       .text {
         display: block;
         float: right;
       }
       &:hover {
-        //font-size: 35px;
         color: grey;
       }
     }

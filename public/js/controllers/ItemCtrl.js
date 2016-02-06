@@ -19,7 +19,6 @@ angular.module( 'ItemCtrl', [] ).controller( 'ItemController',
       };
 
       $scope.goToHome = function ( ) {
-        console.log( 'clicked' );
         $location.path('shop/');
       };
 

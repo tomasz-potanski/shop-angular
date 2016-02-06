@@ -71,10 +71,6 @@ describe('Shop tests', function() {
     var query = $( '#searchPhrase' );
     query.sendKeys( 'Apple' );
 
-    //browser.takeScreenshot().then(function (png) {
-    //  writeScreenShot(png, '/Users/tomasz/exception.png');
-    //});
-
     element.all( by.css( '.zimage' ) ).first().click();
     browser.getLocationAbsUrl().then( function ( url ) {
       expect( url ).toEqual( '/shop/item/2' );
@@ -92,8 +88,5 @@ describe('Shop tests', function() {
   it( 'should have appropriate title', function() {
     expect( browser.getTitle() ).toEqual( 'Shop in AngularJS' );
   });
-
-
-
 
 });

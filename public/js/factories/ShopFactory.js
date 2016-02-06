@@ -9,27 +9,9 @@ angular.module('shopApp')
 
         exports.goToItem = function(id) {
           if ( angular.isNumber(id) ) {
-            console.log('inbox/email/' + id);
             $location.path('shop/item/' + id)
           }
         };
-
-        //exports.deleteMessage = function (id, index) {
-        //  this.messages.splice(index, 1);
-        //};
-
-        //this.items = [];
-        //
-        //ShopFactory.getItems()
-        //  .then( angular.bind( this, function then() {
-        //    this.items = ShopFactory.items;
-        //  }) );
-
-        //exports.getItem = function ( id ) {
-        //  if ( !this.items.length ) {
-        //
-        //  }
-        //};
 
         exports.getItems = function () {
           var deferred = $q.defer();

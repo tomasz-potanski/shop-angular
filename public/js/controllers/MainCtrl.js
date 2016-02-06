@@ -3,7 +3,6 @@ angular.module('MainCtrl', []).controller('MainController',
         function($scope) {
 
       this.goToItem = function( nr ) {
-        console.log('AAAAAAAAAAA');
       };
 
       $scope.scrollToStore = function() {

@@ -4,59 +4,59 @@ $hamburger-width: $original-hamburger-width/2;
 $hamburger-height: $original-hamburger-height/2;
 
 .shop-directive {
-  width: 980px;
-  position: relative;
   margin: 0 auto;
+  position: relative;
+  width: 980px;
   .category-menu {
-    width: 250px;
+    background-color: #fff;
+    display: block;
     height: 100%;
     position: fixed;
-    z-index: 1603;
     right: -250px;
-    display: block;
-    background-color: #fff;
     top: 0;
     transition: right 0.7s;
+    width: 250px;
+    z-index: 1603;
     &.show {
       right: 0;
     }
     .text {
       display: block;
-      width:100%;
-      text-align: center;
       font-size: 14px;
       margin-top: 20px;
+      text-align: center;
+      width:100%;
     }
     #show-filter {
-      width: 100px;
+      display: block;
       font-size: 16px;
       margin: 20px auto 0 auto;
       padding: 10px;
-      display: block;
+      width: 100px;
     }
   }
   .select-wrapper {
     padding-top: 10px;
-    right: 0;
     position: absolute;
+    right: 0;
     z-index: 1001;
     #select_search_by {
       padding: 10px;
     }
   }
   .searchPhrase {
-    width: 300px;
-    left: calc(50% - 150px);
     display: block;
-    text-align: center;
-    padding: 10px;
     font-size: 14px;
+    left: calc(50% - 150px);
+    padding: 10px;
     position: absolute;
-    z-index: 1000;
+    text-align: center;
     transition: width 0.7s, left 0.7s;
+    width: 300px;
+    z-index: 1000;
     &:focus {
-      width: 400px;
       left: calc(50% - 200px);
+      width: 400px;
     }
   }
   .hamburger {
@@ -64,79 +64,73 @@ $hamburger-height: $original-hamburger-height/2;
     background-position: 32px 30px;
     background-repeat: no-repeat;
     background-size: $hamburger-width $hamburger-height;
+    bottom: 10px;
     cursor: pointer;
     display: block;
-    width: 80px;
     height: 80px;
     position: fixed;
     right: 20px;
-    bottom: 10px;
+    width: 80px;
   }
   .lack-of-items {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
     font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
   }
   .items-container {
-    width: 980px;
     border-radius: 6px;
     padding: 80px 10px 10px 10px;
-    //padding: 100px auto 0 auto;
     position: relative;
+    width: 980px;
 
     .shop-item {
-      padding: 0 10px 10px 10px;
-      margin: 0 10px 10px 10px;
       float: left;
-      width: 300px;
       height: 320px;
+      margin: 0 10px 10px 10px;
+      padding: 0 10px 10px 10px;
+      width: 300px;
 
       &.ng-enter,
       &.ng-leave,
       &.ng-move {
-        //transition: 0.5s linear all;
         transition: height 2s;
 
       }
       &.ng-enter,
       &.ng-move {
-        opacity: 0;
         height: 0;
+        opacity: 0;
         overflow: hidden;
       }
       &.ng-move.ng-move-active,
       &.ng-enter.ng-enter-active {
-        opacity: 1;
         height: 300px;
+        opacity: 1;
       }
       &.ng-leave {
         opacity: 1;
         overflow: hidden;
       }
       &.ng-leave.ng-leave-active {
-        opacity: 0;
         height: 0;
-        //padding-top: 0;
-        //padding-bottom: 0;
+        opacity: 0;
       }
 
-      //border: 1px black solid;
       border-radius: 12px;
-
       .zibox {
-        width: 150px;
         height: 150px;
         margin: 0 auto 10px auto;
         overflow: hidden;
+        width: 150px;
         .zimage {
-          width: 100%;
-          height: 100%;
           background-position: 50% 50%;
           background-repeat: no-repeat;
           background-size: cover;
+          height: 100%;
           transform: scale(1, 1);
           transition: .3s;
+          width: 100%;
           &:hover {
             opacity: .7;
             transform: scale(1.2, 1.2);
@@ -174,23 +168,20 @@ $hamburger-height: $original-hamburger-height/2;
       }
 
       .desc {
+        height: 59px;
         overflow: hidden;
         position: relative;
         text-overflow: ellipsis;
-        //white-space: nowrap;
-        height: 59px;
-        //border: 1px black solid;
         &:after {
           content: "...";
           position: relative;
-          top: -40px;
           right: -70px;
+          top: -40px;
         }
       }
 
       &:nth-of-type(even) {
         background-color: $bright-bg;
-        //color: white;
       }
     }
 
@@ -198,56 +189,55 @@ $hamburger-height: $original-hamburger-height/2;
 }
 
 .video-wrapper {
-  width: 100%;
-  position: absolute;
-  //height: 60vh;
   height: 450px;
   left: 0;
   margin-top: 0;
   max-height: 1080px;
   min-height: 450px;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
   #videoPlayer {
-    width: 100%;
     object-fit: cover;
     object-position: 50% 50%;
     position: static;
+    width: 100%;
     z-index: 1500;
   }
 }
 .space-keeper {
-  width: 100%;
   height: 470px;
   position: relative;
+  width: 100%;
   .bottom-container {
-    position: absolute;
-    bottom: 50px;
-    padding: 30px;
-    left: calc(50% - 1px);
     animation: play .8s steps(100) infinite;
+    bottom: 50px;
     cursor: pointer;
+    left: calc(50% - 1px);
+    padding: 30px;
+    position: absolute;
     .arrow {
-      margin: 0 auto;
       background-image: url('../images/arrow.png');
-      height: 11px;
-      width: 15.5px;
+      background-position: center center;
       background-repeat:no-repeat;
       background-size:contain;
-      background-position: center center;
+      height: 11px;
+      margin: 0 auto;
+      width: 15.5px;
     }
   }
   .central-logo {
-    z-index: 1600;
-    position: absolute;
-    top: calc(50% - 35px);
-    font-size: 50px;
-    text-align: center;
-    color: white;
-    left: calc(50% - 150px);
-    user-select: none;
     -webkit-user-select: none;
+    color: white;
+    font-size: 50px;
     font-weight: 700;
+    left: calc(50% - 150px);
+    position: absolute;
+    text-align: center;
     text-shadow: 2px 2px 4px #000000;
+    top: calc(50% - 35px);
+    user-select: none;
+    z-index: 1600;
   }
 }
 

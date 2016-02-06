@@ -1,9 +1,15 @@
 #Simple Online Shop in AngularJS
 ---
+
 - **Technologies**: AngularJS, Express, Node, Protractor, PhantomJS
+
 - **Link**: [http://52.17.123.192:8081/](http://52.17.123.192:8081/)
+
 - **GitHub**: [https://github.com/tomasz-potanski/shop-angular](https://github.com/tomasz-potanski/shop-angular)
+
 - **Date**: November, 2015
+
+**Author: Tomasz Potanski, tomasz@potanski.pl**
 
 Very simple online shop displaying data from json file, built with AngularJS. 
 
@@ -71,5 +77,3 @@ There is a gulp task that compiles *.scss styles to css and watches files.
 ```
 gulp scss:watch
 ```
-
-**Author: Tomasz Potanski, tomasz@potanski.pl**

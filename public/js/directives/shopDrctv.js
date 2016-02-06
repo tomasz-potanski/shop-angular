@@ -17,10 +17,6 @@ angular.module('shopApp')
             ShopFactory.goToItem(id);
           };
 
-          //this.deleteMessage = function (id, index) {
-          //  InboxFactory.deleteMessage(id, index);
-          //};
-          //
           ShopFactory.getItems()
             .then( angular.bind( this, function then() {
               this.items = ShopFactory.items;
@@ -86,10 +82,7 @@ angular.module('shopApp')
         },
 
         link: function (scope, element, attrs, ctrl) {
-          /*
-           by convention we do not $ prefix arguments to the link function
-           this is to be explicit that they have a fixed order
-           */
+
         }
       }
     });
